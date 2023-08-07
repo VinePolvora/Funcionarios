@@ -1,5 +1,6 @@
 package br.com.santander.funcionarios.funcionarios.application.api;
 
+import br.com.santander.funcionarios.funcionarios.domain.Designacao;
 import br.com.santander.funcionarios.funcionarios.domain.EstadoCivil;
 import br.com.santander.funcionarios.funcionarios.domain.Sexo;
 import lombok.Value;
@@ -18,6 +19,10 @@ public class FuncinarioRequest {
 
     @NotNull
     private String nomeCompleto;
+    @NotNull
+    private String salario;
+    @NotNull
+    private Designacao designacao;
     @CPF
     private String cpf;
     @NotBlank

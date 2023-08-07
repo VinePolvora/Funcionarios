@@ -28,6 +28,10 @@ public class Funcionario {
     private UUID idFuncionario;
    @NotNull
     private String nomeCompleto;
+   @NotNull
+   private String salario;
+   @NotNull
+   private Designacao designacao;
    @CPF
     private String cpf;
    @Email
@@ -47,6 +51,8 @@ public class Funcionario {
 
     public Funcionario(FuncinarioRequest funcinarioRequest) {
         this.nomeCompleto = funcinarioRequest.getNomeCompleto();
+        this.salario = funcinarioRequest.getSalario();
+        this.designacao = funcinarioRequest.getDesignacao();
         this.cpf = funcinarioRequest.getCpf();
         this.email = funcinarioRequest.getEmail();
         this.telefone = funcinarioRequest.getTelefone();
