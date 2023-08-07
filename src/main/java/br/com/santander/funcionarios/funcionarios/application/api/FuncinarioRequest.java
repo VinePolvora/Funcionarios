@@ -17,7 +17,7 @@ import java.util.UUID;
 public class FuncinarioRequest {
 
     @NotNull
-    private String nomeCliente;
+    private String nomeCompleto;
     @CPF
     private String cpf;
     @NotBlank

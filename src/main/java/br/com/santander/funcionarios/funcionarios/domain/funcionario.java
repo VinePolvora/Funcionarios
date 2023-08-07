@@ -26,7 +26,7 @@ public class funcionario {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID idFuncionario;
    @NotNull
-    private String nomeCliente;
+    private String nomeCompleto;
    @CPF
     private String cpf;
    @Email
@@ -44,10 +44,10 @@ public class funcionario {
     private LocalDateTime dataHoraDoCadastro;
     private LocalDateTime dataDaAlteracaoDoCadastro;
 
-    public funcionario(@NotNull String nomeCliente, String cpf, String email,
+    public funcionario(@NotNull String nomeCompleto, String cpf, String email,
                        String telefone, String endereco, @NotNull LocalDate dataNascimento,
                        Sexo sexo, EstadoCivil estadoCivil) {
-        this.nomeCliente = nomeCliente;
+        this.nomeCompleto = nomeCompleto;
         this.cpf = cpf;
         this.email = email;
         this.telefone = telefone;
