@@ -11,16 +11,14 @@ import org.springframework.stereotype.Service;
 @Service
 @Log4j2
 @RequiredArgsConstructor
-public class FuncionarioApplicationService extends FuncionarioService {
+public class FuncionarioApplicationService implements FuncionarioService{
 
-    private final FuncionarioRepository funncionarioRepository;
-
+    private final FuncionarioRepository funcionarioRepository;
+@Override
     public FuncionarioResponse criaFuncionario(FuncinarioRequest funcinarioRequest) {
         log.info("[inicia] FuncionarioApplicationService - criaFuncionario");
-        Funcionario funcionario = funncionarioRepository.salva(new Funcionario(funcinarioRequest));
+        Funcionario funcionario = funcionarioRepository.salva(new Funcionario(funcinarioRequest));
         log.info("[finaliza] FuncionarioApplicationService - criaFuncionario");
-        return FuncionarioResponse.builder()
-                .idFuncionario(funcionario.getIdFuncionario())
-                .build();
+        return FuncionarioResponse.builder().idFuncionario(funcionario.getIdFuncionario()).build();
     }
 }
