@@ -3,12 +3,13 @@ package br.com.santander.funcionarios.funcionarios.application.api;
 import br.com.santander.funcionarios.funcionarios.application.service.FuncionarioApplicationService;
 import br.com.santander.funcionarios.funcionarios.application.service.FuncionarioService;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @Log4j2
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class FuncionarioController implements FuncionarioApi {
     private final FuncionarioApplicationService funcionarioApplicationService;
 

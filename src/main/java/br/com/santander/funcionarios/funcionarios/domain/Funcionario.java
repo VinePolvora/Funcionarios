@@ -1,6 +1,7 @@
 package br.com.santander.funcionarios.funcionarios.domain;
 
 
+import br.com.santander.funcionarios.funcionarios.application.api.FuncinarioRequest;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,7 +21,7 @@ import java.util.UUID;
 @Getter
 @Entity
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class funcionario {
+public class Funcionario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -44,17 +45,15 @@ public class funcionario {
     private LocalDateTime dataHoraDoCadastro;
     private LocalDateTime dataDaAlteracaoDoCadastro;
 
-    public funcionario(@NotNull String nomeCompleto, String cpf, String email,
-                       String telefone, String endereco, @NotNull LocalDate dataNascimento,
-                       Sexo sexo, EstadoCivil estadoCivil) {
-        this.nomeCompleto = nomeCompleto;
-        this.cpf = cpf;
-        this.email = email;
-        this.telefone = telefone;
-        this.endereco = endereco;
-        this.dataNascimento = dataNascimento;
-        this.sexo = sexo;
-        this.estadoCivil = estadoCivil;
+    public Funcionario(FuncinarioRequest funcinarioRequest) {
+        this.nomeCompleto = funcinarioRequest.getNomeCompleto();
+        this.cpf = funcinarioRequest.getCpf();
+        this.email = funcinarioRequest.getEmail();
+        this.telefone = funcinarioRequest.getTelefone();
+        this.endereco = funcinarioRequest.getEndereco();
+        this.dataNascimento = funcinarioRequest.getDataNascimento();
+        this.sexo = funcinarioRequest.getSexo();
+        this.estadoCivil = funcinarioRequest.getEstadoCivil();
         this.dataHoraDoCadastro = LocalDateTime.now();
     }
 }
