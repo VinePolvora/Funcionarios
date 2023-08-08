@@ -33,6 +33,8 @@ public class Funcionario {
 	@Column(unique = true)
 	private String cpf;
 	@Email
+	@NotNull
+	@Column(unique = true)
 	private String email;
 	@NotBlank
 	private String telefone;

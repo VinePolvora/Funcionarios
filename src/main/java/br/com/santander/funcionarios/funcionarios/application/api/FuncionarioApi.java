@@ -12,8 +12,8 @@ import java.util.UUID;
 public interface FuncionarioApi {
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
-    FuncionarioResponse postFuncionario (@Valid @RequestBody
-                                         FuncinarioRequest funcinarioRequest);
+    FuncionarioResponse postFuncionario 
+    (@Valid @RequestBody FuncinarioRequest funcinarioRequest);
 
     @GetMapping
     @ResponseStatus(code = HttpStatus.OK)
@@ -23,7 +23,7 @@ public interface FuncionarioApi {
     @ResponseStatus(code = HttpStatus.OK)
     FuncionarioDetalhadoResponse getFuncionarioAtravesId(@PathVariable UUID idFuncionario);
 
-    @DeleteMapping(value = "/(idFuncionario)")
+    @DeleteMapping(value = "/{idFuncionario}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
     void deletaFuncionarioAtravesId(@PathVariable UUID idFuncionario);
 }
