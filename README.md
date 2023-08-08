@@ -29,13 +29,7 @@ mvn -version.
 https://github.com/VinePolvora/Funcionarios.git
 
 
-4. Abra o projeto em sua IDE. Recomendamos o uso do IntelliJ IDEA.
-
-## Configuração do Banco de Dados
-
-1. Configure as propriedades do banco de dados no arquivo `application.properties` ou `application.yml`.
-
-2. Execute as migrações do banco de dados para criar as tabelas necessárias. Isso pode ser feito automaticamente pelo Spring Boot ou utilizando ferramentas de migração como o Flyway ou Liquibase.
+4. Abra o projeto em sua IDE. Recomendamos o uso do IntelliJ IDEA
 
 ## Executando o Projeto
 
@@ -48,24 +42,14 @@ https://github.com/VinePolvora/Funcionarios.git
 A API oferece os seguintes endpoints:
 
 - `GET /api/funcionarios`: Retorna a lista de todos os funcionários cadastrados.
-- `GET /api/funcionarios/{id}`: Retorna os detalhes de um funcionário específico com base no ID.
+- `GET /api/funcionarios/{idFuncionario}`: Retorna os detalhes de um funcionário específico com base no ID.
 - `POST /api/funcionarios`: Adiciona um novo funcionário.
-- `PUT /api/funcionarios/{id}`: Atualiza os detalhes de um funcionário existente com base no ID.
-- `DELETE /api/funcionarios/{id}`: Exclui um funcionário com base no ID.
+- `PUT /api/funcionarios/{idFuncionario}`: Atualiza os detalhes de um funcionário existente com base no ID.
+- `DELETE /api/funcionarios/{idFuncionario}`: Exclui um funcionário com base no ID.
 
 ## Documentação da API
 
 A documentação da API é gerada automaticamente pelo Swagger. Para acessar, inicie o projeto e abra a URL `http://localhost:8080/funcionarios/public/swagger` no seu navegador.
-
-## Contribuição
-
-Se você quiser contribuir para este projeto, siga as etapas:
-
-1. Crie um fork deste repositório.
-2. Crie uma branch com uma descrição clara da sua contribuição: `git checkout -b sua-feature`.
-3. Faça as modificações desejadas e adicione seus commits: `git commit -am 'Descrição da contribuição'`.
-4. Envie para o seu fork: `git push origin sua-feature`.
-5. Crie um Pull Request explicando suas modificações.
 
 ## Descrição do projeto
 
