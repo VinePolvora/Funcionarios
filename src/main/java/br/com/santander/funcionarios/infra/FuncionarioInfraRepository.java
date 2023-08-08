@@ -25,7 +25,8 @@ public class FuncionarioInfraRepository implements FuncionarioRepository {
     @Override
     public List<Funcionario> buscaTodosFuncionarios() {
         log.info("[inicia] FuncionarioInfraRepository - buscaTodosFuncionarios");
+        List<Funcionario> todosFuncionarios = funcionarioSpringDataJPARepository.findAll();
         log.info("[finaliza] FuncionarioInfraRepository - buscaTodosFuncionarios");
-        return null;
+        return todosFuncionarios;
     }
 }
