@@ -66,3 +66,7 @@ Se você quiser contribuir para este projeto, siga as etapas:
 3. Faça as modificações desejadas e adicione seus commits: `git commit -am 'Descrição da contribuição'`.
 4. Envie para o seu fork: `git push origin sua-feature`.
 5. Crie um Pull Request explicando suas modificações.
+
+## Descrição do projeto
+
+O Sistema de Gerenciamento de Funcionários é uma aplicação desenvolvida em Java 11 utilizando o framework Spring Boot. Essa aplicação foi criada com o propósito de facilitar o controle e gestão de informações relacionadas aos funcionários de uma organização. O sistema oferece uma API completa que permite adicionar, visualizar, atualizar e excluir detalhes dos funcionários de forma eficiente e organizada.
