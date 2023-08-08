@@ -1,5 +1,6 @@
 package br.com.santander.funcionarios.funcionarios.domain;
 
+import br.com.santander.funcionarios.funcionarios.application.api.FuncinarioAlteracaoRequest;
 import br.com.santander.funcionarios.funcionarios.application.api.FuncinarioRequest;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -62,5 +63,19 @@ public class Funcionario {
 		this.sexo = funcinarioRequest.getSexo();
 		this.estadoCivil = funcinarioRequest.getEstadoCivil();
 		this.dataHoraDoCadastro = LocalDateTime.now();
+	}
+
+	public void altera(FuncinarioAlteracaoRequest funcinarioRequest) {
+		this.nomeCompleto = funcinarioRequest.getNomeCompleto();
+		this.salario = funcinarioRequest.getSalario();
+		this.designacao = funcinarioRequest.getDesignacao();
+		this.cpf = funcinarioRequest.getCpf();
+		this.email = funcinarioRequest.getEmail();
+		this.telefone = funcinarioRequest.getTelefone();
+		this.endereco = funcinarioRequest.getEndereco();
+		this.dataNascimento = funcinarioRequest.getDataNascimento();
+		this.sexo = funcinarioRequest.getSexo();
+		this.estadoCivil = funcinarioRequest.getEstadoCivil();
+		this.dataDaAlteracaoDoCadastro = LocalDateTime.now();
 	}
 }

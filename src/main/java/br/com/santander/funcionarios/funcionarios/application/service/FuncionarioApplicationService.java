@@ -1,5 +1,6 @@
 package br.com.santander.funcionarios.funcionarios.application.service;
 
+import br.com.santander.funcionarios.funcionarios.application.api.FuncinarioAlteracaoRequest;
 import br.com.santander.funcionarios.funcionarios.application.api.FuncinarioRequest;
 import br.com.santander.funcionarios.funcionarios.application.api.FuncionarioDetalhadoResponse;
 import br.com.santander.funcionarios.funcionarios.application.api.FuncionarioListResponse;
@@ -50,5 +51,14 @@ public class FuncionarioApplicationService implements FuncionarioService{
 		 funcionarioRepository.deletaFuncionario(funcionario);
 		 log.info("[finaliza] FuncionarioApplicationService - deletaFuncionarioAtravesId");
 		
+	}
+
+	@Override
+	public void alteraFuncionarioAtravesId(UUID idFuncionario, FuncinarioAlteracaoRequest funcinarioAlteracaoRequest) {
+		 log.info("[inicia] FuncionarioApplicationService - alteraFuncionarioAtravesId");
+		 Funcionario funcionario = funcionarioRepository.buscaFuncionarioAtravesId(idFuncionario);
+		 funcionario.altera(funcinarioAlteracaoRequest);
+		 funcionarioRepository.salva(funcionario);
+		 log.info("[finaliza] FuncionarioApplicationService - alteraFuncionarioAtravesId");
 	}
 }
