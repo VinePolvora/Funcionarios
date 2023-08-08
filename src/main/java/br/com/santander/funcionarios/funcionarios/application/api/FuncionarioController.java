@@ -51,12 +51,11 @@ public class FuncionarioController implements FuncionarioApi {
     }
 
 	@Override
-	public FuncionarioResponse pathFuncionario(UUID idFuncionario,
+	public void pathFuncionario(UUID idFuncionario,
 			@Valid FuncinarioAlteracaoRequest funcinarioAlteracaoRequest) {
 		 log.info("[inicia] FuncionarioController - dpathFuncionario");
 	     log.info("[idFuncionario] {}", idFuncionario);
 	     log.info("[finaliza] FuncionarioController - dpathFuncionario");
-		return null;
 	}
 
 }
