@@ -13,25 +13,24 @@ import br.com.santander.funcionarios.funcionarios.domain.EstadoCivil;
 import br.com.santander.funcionarios.funcionarios.domain.Sexo;
 import lombok.Value;
 @Value
-public class FuncinarioRequest {
-
-    @NotNull
-    private String nomeCompleto;
-    @NotNull
-    private String salario;
-    @NotNull
-    private Designacao designacao;
-    @CPF
-    private String cpf;
-    @NotBlank
-    @Email
-    private String email;
-    @NotBlank
-    private String telefone;
-    @NotBlank
-    private String endereco;
-    @NotNull
-    private LocalDate dataNascimento;
-    private Sexo sexo;
-    private EstadoCivil estadoCivil;
+public class FuncinarioAlteracaoRequest {
+	 @NotNull
+	    private String nomeCompleto;
+	    @NotNull
+	    private String salario;
+	    @NotNull
+	    private Designacao designacao;
+	    @CPF
+	    private String cpf;
+	    @NotBlank
+	    @Email
+	    private String email;
+	    @NotBlank
+	    private String telefone;
+	    @NotBlank
+	    private String endereco;
+	    @NotNull
+	    private LocalDate dataNascimento;
+	    private Sexo sexo;
+	    private EstadoCivil estadoCivil;
 }
