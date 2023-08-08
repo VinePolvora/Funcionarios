@@ -3,6 +3,8 @@ package br.com.santander.funcionarios.funcionarios.application.api;
 import java.util.List;
 import java.util.UUID;
 
+import javax.validation.Valid;
+
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.santander.funcionarios.funcionarios.application.service.FuncionarioService;
@@ -45,6 +47,16 @@ public class FuncionarioController implements FuncionarioApi {
         log.info("[inicia] FuncionarioController - deletaFuncionarioAtravesId");
         log.info("[idFuncionario] {}", idFuncionario);
         funcionarioService.deletaFuncionarioAtravesId(idFuncionario);
-        log.info("[inicia] FuncionarioController - deletaFuncionarioAtravesId");
+        log.info("[finaliza] FuncionarioController - deletaFuncionarioAtravesId");
     }
+
+	@Override
+	public FuncionarioResponse pathFuncionario(UUID idFuncionario,
+			@Valid FuncinarioAlteracaoRequest funcinarioAlteracaoRequest) {
+		 log.info("[inicia] FuncionarioController - dpathFuncionario");
+	     log.info("[idFuncionario] {}", idFuncionario);
+	     log.info("[finaliza] FuncionarioController - dpathFuncionario");
+		return null;
+	}
+
 }
