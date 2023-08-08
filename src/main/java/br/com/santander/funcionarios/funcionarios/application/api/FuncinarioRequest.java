@@ -1,19 +1,17 @@
 package br.com.santander.funcionarios.funcionarios.application.api;
 
+import java.time.LocalDate;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+import org.hibernate.validator.constraints.br.CPF;
+
 import br.com.santander.funcionarios.funcionarios.domain.Designacao;
 import br.com.santander.funcionarios.funcionarios.domain.EstadoCivil;
 import br.com.santander.funcionarios.funcionarios.domain.Sexo;
 import lombok.Value;
-import org.hibernate.validator.constraints.br.CPF;
-
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
-import java.util.UUID;
 @Value
 public class FuncinarioRequest {
 
