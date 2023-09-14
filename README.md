@@ -8,7 +8,7 @@ Este projeto é um sistema de gerenciamento de funcionários construído com Jav
 - Spring Boot
 - Maven
 - Swagger
-- Banco de Dados H2
+- Banco de Dados PostgreSQL
 - IntelliJ IDEA (ou sua IDE preferida)
 
 ## Configuração do Ambiente de Desenvolvimento
