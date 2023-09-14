@@ -4,14 +4,14 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/funcionarios  # Substitua "localhost" e "seubanco" pelos detalhes do seu banco de dados PostgreSQL.
+    url: jdbc:postgresql://localhost:5432/funcionarios 
     username: postgres
     password: 123
     driverClassName: org.postgresql.Driver
 
   jpa:
     hibernate:
-      ddl-auto: update  # Isso pode ser "update" para atualizar automaticamente o esquema ou "create" para criar sempre do zero.
+      ddl-auto: update 
 
 springdoc:
   swagger-ui:
