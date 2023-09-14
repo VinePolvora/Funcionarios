@@ -1,19 +1,18 @@
-server: 
+server:
   servlet:
     context-path: /funcionarios/api
 
-    spring:
-      datasource:
-        url: jdbc:h2:mem:demodb
-        username: sa
-        password:
-        driverClassName: org.h2.Driver
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/funcionarios  # Substitua "localhost" e "seubanco" pelos detalhes do seu banco de dados PostgreSQL.
+    username: postgres
+    password: 123
+    driverClassName: org.postgresql.Driver
 
-      h2:
-        console:
-          enabled: true
-          path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: update  # Isso pode ser "update" para atualizar automaticamente o esquema ou "create" para criar sempre do zero.
 
 springdoc:
   swagger-ui:
-    path: /public/swagger  
+    path: /public/swagger
